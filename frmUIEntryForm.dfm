@@ -1,9 +1,10 @@
 object UIEntryForm: TUIEntryForm
   Left = 0
   Top = 0
+  BorderStyle = bsSingle
   Caption = 'Entry Form'
-  ClientHeight = 299
-  ClientWidth = 635
+  ClientHeight = 377
+  ClientWidth = 645
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,8 +17,8 @@ object UIEntryForm: TUIEntryForm
   object RelativePanel1: TRelativePanel
     Left = 0
     Top = 0
-    Width = 635
-    Height = 299
+    Width = 645
+    Height = 377
     ControlCollection = <
       item
         Control = DateTimePicker1
@@ -45,9 +46,20 @@ object UIEntryForm: TUIEntryForm
         AlignRightWithPanel = False
         AlignTopWithPanel = False
         AlignVerticalCenterWithPanel = False
+        Below = DateTimePicker1
       end
       item
         Control = Memo1
+        AlignBottomWithPanel = False
+        AlignHorizontalCenterWithPanel = False
+        AlignLeftWithPanel = True
+        AlignRightWithPanel = True
+        AlignTopWithPanel = True
+        AlignVerticalCenterWithPanel = False
+        Below = Label2
+      end
+      item
+        Control = Button1
         AlignBottomWithPanel = False
         AlignHorizontalCenterWithPanel = False
         AlignLeftWithPanel = False
@@ -57,10 +69,13 @@ object UIEntryForm: TUIEntryForm
       end>
     Align = alClient
     BevelOuter = bvNone
+    Caption = 'DateTimePicker1'
     TabOrder = 0
+    ExplicitWidth = 635
+    ExplicitHeight = 299
     DesignSize = (
-      635
-      299)
+      645
+      377)
     object DateTimePicker1: TDateTimePicker
       Left = 92
       Top = 6
@@ -97,7 +112,7 @@ object UIEntryForm: TUIEntryForm
     object Label2: TLabel
       AlignWithMargins = True
       Left = 10
-      Top = 40
+      Top = 41
       Width = 54
       Height = 17
       Margins.Top = 10
@@ -113,15 +128,35 @@ object UIEntryForm: TUIEntryForm
     object Memo1: TMemo
       AlignWithMargins = True
       Left = 5
-      Top = 63
-      Width = 625
-      Height = 146
+      Top = 64
+      Width = 635
+      Height = 305
       Margins.Left = 5
       Margins.Right = 5
+      Margins.Bottom = 5
       Anchors = []
       Lines.Strings = (
         'Memo1')
+      PopupMenu = PopupMenu1
       TabOrder = 1
+    end
+    object Button1: TButton
+      Left = 70
+      Top = 37
+      Width = 91
+      Height = 25
+      Anchors = []
+      Caption = 'Use Dictation...'
+      TabOrder = 2
+      OnClick = Button1Click
+    end
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 272
+    Top = 128
+    object pmiDictation: TMenuItem
+      Caption = 'Dictation'
+      OnClick = pmiDictationClick
     end
   end
 end
