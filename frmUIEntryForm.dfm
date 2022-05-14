@@ -12,6 +12,8 @@ object UIEntryForm: TUIEntryForm
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
   PixelsPerInch = 96
   TextHeight = 13
   object RelativePanel1: TRelativePanel
@@ -127,16 +129,14 @@ object UIEntryForm: TUIEntryForm
     end
     object Memo1: TMemo
       AlignWithMargins = True
-      Left = 5
+      Left = 10
       Top = 64
-      Width = 635
+      Width = 625
       Height = 305
-      Margins.Left = 5
-      Margins.Right = 5
+      Margins.Left = 10
+      Margins.Right = 10
       Margins.Bottom = 5
       Anchors = []
-      Lines.Strings = (
-        'Memo1')
       PopupMenu = PopupMenu1
       TabOrder = 1
     end
@@ -152,8 +152,8 @@ object UIEntryForm: TUIEntryForm
     end
   end
   object PopupMenu1: TPopupMenu
-    Left = 272
-    Top = 128
+    Left = 592
+    Top = 8
     object pmiDictation: TMenuItem
       Caption = 'Dictation'
       OnClick = pmiDictationClick

@@ -11,6 +11,7 @@ object UIMain: TUIMain
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object RelativePanel1: TRelativePanel

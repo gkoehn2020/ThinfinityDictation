@@ -12,6 +12,7 @@ type
     RelativePanel1: TRelativePanel;
     Button1: TButton;
     procedure Button1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -32,6 +33,13 @@ uses
 procedure TUIMain.Button1Click(Sender: TObject);
 begin
   UIEntryForm.show;
+end;
+
+procedure TUIMain.FormCreate(Sender: TObject);
+begin
+  self.top := 0;
+  self.Left := 0;
+
 end;
 
 end.

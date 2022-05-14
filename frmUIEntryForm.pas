@@ -3,6 +3,7 @@ unit frmUIEntryForm;
 interface
 
 uses
+  untDictationEntryComponent,
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls,
   Vcl.ExtCtrls, Vcl.WinXCtrls, Vcl.Menus;
@@ -19,8 +20,11 @@ type
     Button1: TButton;
     procedure pmiDictationClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
     { Private declarations }
+    FDictationEntryComponent: TDictationEntryComponent;
   public
     { Public declarations }
   end;
@@ -32,7 +36,24 @@ implementation
 
 {$R *.dfm}
 
+uses
+  frmUIDictation
+  ;
+
 procedure TUIEntryForm.Button1Click(Sender: TObject);
+begin
+  UIDictation.Show;
+end;
+
+procedure TUIEntryForm.FormCreate(Sender: TObject);
+begin
+  self.Left := 0;
+  self.top := 200;
+  FDictationEntryComponent := TDictationEntryComponent.Create;
+  FDictationEntryComponent.CreateWebComponent(Memo1);
+end;
+
+procedure TUIEntryForm.FormDestroy(Sender: TObject);
 begin
 //
 end;
