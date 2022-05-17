@@ -1,22 +1,7 @@
-const componentOneStyle = `@charset "utf-8";
-.loading-overlay {
-    background: rgba( 26,26,26,0.7 );
-    /* position: fixed; */
-    width: 100%;
-    height: 100%;
-    z-index: 5;
-    top: 0;
-}
-
-`;
-
-const addCSS = codeToAdd => document.head.appendChild(document.createElement("style")).innerHTML = codeToAdd;
-addCSS(componentOneStyle);
-
 xtag.register('x-dictationcomp', {
   content: `
-    <div class="loading-overlay orion-working-hidden">
-      <textarea id="narrative" rows=8 style="width: 100%;height: 100%;webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;resize: vertical;"></textarea>
+    <div style="width: 100%;height: 100%;z-index: 5;top: 0;">
+      <textarea id="narrative" rows=8 style="resize: none !important;width: 100%;height: 100%;webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;resize: vertical;"></textarea>
     </div>`,
   lifecycle: {
     created  : function(){ 

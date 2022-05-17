@@ -17,6 +17,7 @@ type
     Label2: TLabel;
     Button1: TButton;
     Panel1: TPanel;
+    Edit1: TEdit;
     procedure pmiDictationClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);

@@ -88,6 +88,14 @@ object UIEntryForm: TUIEntryForm
     Caption = 'Panel1'
     TabOrder = 2
   end
+  object Edit1: TEdit
+    Left = 288
+    Top = 8
+    Width = 121
+    Height = 21
+    TabOrder = 3
+    Text = 'Edit1'
+  end
   object PopupMenu1: TPopupMenu
     Left = 592
     Top = 8
