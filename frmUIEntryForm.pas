@@ -10,14 +10,13 @@ uses
 
 type
   TUIEntryForm = class(TForm)
-    RelativePanel1: TRelativePanel;
+    PopupMenu1: TPopupMenu;
+    pmiDictation: TMenuItem;
     DateTimePicker1: TDateTimePicker;
     Label1: TLabel;
     Label2: TLabel;
-    Memo1: TMemo;
-    PopupMenu1: TPopupMenu;
-    pmiDictation: TMenuItem;
     Button1: TButton;
+    Panel1: TPanel;
     procedure pmiDictationClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -50,7 +49,7 @@ begin
   self.Left := 0;
   self.top := 200;
   FDictationEntryComponent := TDictationEntryComponent.Create;
-  FDictationEntryComponent.CreateWebComponent(Memo1);
+  FDictationEntryComponent.CreateWebComponent(Panel1);
 end;
 
 procedure TUIEntryForm.FormDestroy(Sender: TObject);
